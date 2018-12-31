@@ -1,12 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <style>
+      .none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Tabla Cosecha</h2>
+      <div class="card">
+        <div class="card-header">Add Cosecha</div>
+        <div class="card-header"><h4>Salas Caceres, Dayana</h4></div>
+        <div class="card-body">
+          <form action="">
+            <!-- Fecha  -->
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter fecha"
+                id="fecha"
+              />
+            </div>
+            <!-- End -->
+            <!-- Sus Siembras del agricultor -->
+            <div class="form-group">
+              <label for="producto">Cosecha</label>
+              <select class="form-control" id="producto">
+                <option>--Selecione--</option>
+                <option>Maiz</option>
+                <option>Papa</option>
+                <option>Tomate</option>
+              </select>
+            </div>
+            <!-- End -->
+            <!--  Radio Button seleccion de tamaños de siembra a cosechar-->
+            <div class="form-group">
+              <label for="">Selecione</label>
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        id="mfour"
+                      />Hectarias
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        id="mthree"
+                      />Menos de una hectaria
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        name="optradio"
+                        id="mtwe"
+                      />Menos 1000 metros cuadrado
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End -->
+            <!--Cantidad  de siembra a cosechar -->
+            <div class="form-group cantidad none">
+              <label for="">Cantidad Cosecha</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">m²</span>
+                </div>
+                <input type="text" class="form-control" maxlength="3" />
+                <div class="input-group-append four none">
+                  <span class="input-group-text">0000</span>
+                </div>
+                <div class="input-group-append three none">
+                  <span class="input-group-text">000</span>
+                </div>
+                <div class="input-group-append twe none">
+                  <span class="input-group-text">00</span>
+                </div>
+              </div>
+            </div>
+            <!-- end -->
+            <a href="#" class="btn btn-primary">Submit</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var animationFrame =
+          window.requestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.msRequestAnimationFrame;
+
+        var valCantidad = function() {
+          var mfour = document.getElementById("mfour").checked;
+          var mthree = document.getElementById("mthree").checked;
+          var mtwe = document.getElementById("mtwe").checked;
+          var cant = document.querySelector(".cantidad");
+          var four = document.querySelector(".four");
+          var three = document.querySelector(".three");
+          var twe = document.querySelector(".twe");
+
+          if (mfour == true && mthree == false && mtwe == false) {
+            cant.classList.remove("none");
+            four.classList.remove("none");
+            three.classList.add("none");
+            twe.classList.add("none");
+          } else if (mfour == false && mthree == true && mtwe == false) {
+            cant.classList.remove("none");
+            four.classList.add("none");
+            three.classList.remove("none");
+            twe.classList.add("none");
+          } else if (mfour == false && mthree == false && mtwe == true) {
+            cant.classList.remove("none");
+            four.classList.add("none");
+            three.classList.add("none");
+            twe.classList.remove("none");
+          } else {
+            cant.classList.add("none");
+            four.classList.add("none");
+            three.classList.add("none");
+            twe.classList.add("none");
+          }
+          animationFrame(valCantidad);
+        };
+        valCantidad();
+      });
+    </script>
+  </body>
 </html>
