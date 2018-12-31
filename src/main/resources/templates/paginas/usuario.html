@@ -11,6 +11,11 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
+    <style>
+      .none {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -22,53 +27,150 @@
             <div class="form-group">
               <label for="tipoUser">Tipo Usuario</label>
               <select class="form-control" id="tipo-user">
-                <option>--Selecione--</option>
+                <option>--Seleccione--</option>
                 <option>Agricultor</option>
                 <option>Empresa</option>
                 <option>Grupo de Personas</option>
               </select>
             </div>
+            <!-- Datos del Agricultor -->
+            <div class="agricultor none">
+              <div class="form-group">
+                <label for="">Nombre</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter nombre"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Apellido Paterno</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter apellido paterno"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Apellido Materno</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter apellido materno"
+                />
+              </div>
+              <div class="row align-items-center">
+                <div class="form-group col-sm-6">
+                  <label for="">Tipo Documento</label>
+                  <select class="form-control" id="tipo-doc">
+                    <option>Documento de Indentidad</option>
+                    <option>Pasaporte</option>
+                  </select>
+                </div>
 
+                <div class="form-group col-sm-6 dni none">
+                  <label for="">Dni</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter Dni"
+                  />
+                </div>
+                <div class="form-group col-sm-6 pasaporte none">
+                  <label for="">Pasaporte</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter Pasaporte"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- -------------- -->
+            <!-- Datos de la Empresa -->
+            <div class="empresa none">
+              <div class="form-group">
+                <label for="">Ruc</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter Ruc"
+                />
+              </div>
+              <div class="form-group">
+                <label for="">Rason Social</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Enter Rason Social"
+                />
+              </div>
+            </div>
+            <!-- ------------------------- -->
             <div class="form-group">
-              <label for="">Nombre</label>
+              <label for="">Email</label>
               <input
+                id="telefono"
                 class="form-control"
                 type="text"
-                placeholder="Enter nombre"
+                placeholder="Enter Email"
               />
             </div>
             <div class="form-group">
-              <label for="">Apellido Paterno</label>
+              <label for="">Telefono</label>
               <input
+                id="telefono"
                 class="form-control"
                 type="text"
-                placeholder="Enter apellido paterno"
+                placeholder="Enter Telefono"
               />
             </div>
-            <div class="form-group">
-              <label for="">Apellido Materno</label>
-              <input
-                class="form-control"
-                type="text"
-                placeholder="Enter apellido materno"
-              />
-            </div>
-
             <a href="#" class="btn btn-primary">Submit</a>
           </form>
         </div>
       </div>
     </div>
-
     <script>
-    //   document.addEventListener("DOMContentLoaded",function(){
-    //       const tipouser = document.getElementById('tipo-user');
-    //       const user =  tipouser.value;
-    //     //   function agricultor(){
-           
-    //         user = 'hello';
-    //     //   }
-    //   });
+      document.addEventListener("DOMContentLoaded", function() {
+        var animationFrame =
+          window.requestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.msRequestAnimationFrame;
+
+        function tipoUser() {
+          var tipouser = document.getElementById("tipo-user").value;
+          var agri = document.querySelector(".agricultor");
+          var empresa = document.querySelector(".empresa");
+          if (tipouser == "--Seleccione--") {
+            agri.classList.add("none");
+            empresa.classList.add("none");
+          } else if (tipouser == "Agricultor") {
+            agri.classList.remove("none");
+            empresa.classList.add("none");
+          } else {
+            empresa.classList.remove("none");
+            agri.classList.add("none");
+          }
+          animationFrame(tipoUser);
+        }
+        tipoUser();
+
+        function tipoDoc() {
+          var tipodoc = document.getElementById("tipo-doc").value;
+          var dni = document.querySelector(".dni");
+          var pasaporte = document.querySelector(".pasaporte");
+          if (tipodoc == "Pasaporte") {
+            dni.classList.add("none");
+            pasaporte.classList.remove("none");
+          } else {
+            dni.classList.remove("none");
+            pasaporte.classList.add("none");
+          }
+          animationFrame(tipoDoc);
+        }
+        tipoDoc();
+      });
     </script>
   </body>
 </html>

@@ -20,14 +20,132 @@
         <h4 class="card-header">Perez Solar, David</h4>
         <div class="card-body">
           <form action="" method="post">
-            <div class="form-group">
-              <label for="producto">Producto</label>
-              <select class="form-control" id="producto">
+            <!-- Region - Provincia - Distrito -->
+            <div class="row align-items-center">
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="regio">Region</label>
+                    <select class="form-control" id="region">
+                      <option>--Selecione--</option>
+                      <option>Lima</option>
+                      <option>Ica</option>
+                      <option>La Libertad</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="provincia">Provincia</label>
+                    <select class="form-control" id="provincia">
+                      <option>--Selecione--</option>
+                      <option>Huaura</option>
+                      <option>Baranca</option>
+                      <option>Huaral</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="distrito">Distrito</label>
+                    <select class="form-control" id="distrito">
+                      <option>--Selecione--</option>
+                      <option>Huaral</option>
+                      <option>Aucallama</option>
+                      <option>Chancay</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            <!-- Producto -->
+            <div class="row align-items-center">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label for="producto">Grupo</label>
+                  <select class="form-control" id="producto">
                     <option>--Selecione--</option>
-                    <option>Arroz</option>
+                    <option>Hortalizas</option>
+                    <option>Frutos</option>
+                    <option>Tuberculos</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label for="producto">Clase</label>
+                  <select class="form-control" id="producto">
+                    <option>--Selecione--</option>
+                    <option>Maiz</option>
+                    <option>Papa</option>
+                    <option>Verduras</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label for="producto">SubClase</label>
+                  <select class="form-control" id="producto">
+                    <option>--Selecione--</option>
                     <option>Papa</option>
                     <option>Zanahoria</option>
+                    <option>Esparrago</option>
                   </select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label for="producto">SubClase Nacional</label>
+                  <select class="form-control" id="producto">
+                    <option>--Selecione--</option>
+                    <option>Papa yungay</option>
+                    <option>Papa pericholi</option>
+                    <option>Papa huayro</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- --------------------- -->
+            <div class="row align-items-center">
+              <div class="col-sm-6 d-flex justify-content-center">
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="optradio"
+                    />Menos de una Hectaria
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      name="optradio"
+                    />Mas de una Hectaria
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="hectaria">Cantidad</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter cantidad hectaria o m2"
+                    id="hectaria"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- ------------ -->
+            <div class="form-group">
+              <label for="hectaria">Fecha</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter fecha"
+                id="hectaria"
+              />
             </div>
             <a href="#" class="btn btn-primary">Submit</a>
           </form>
