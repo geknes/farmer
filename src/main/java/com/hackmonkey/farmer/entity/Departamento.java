@@ -24,5 +24,28 @@ public class Departamento extends BaseEntity implements Serializable{
 	private Long idDepartamento;
 	
 	private String nombreDepartamento;
+
+	public Departamento() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdDepartamento() {
+		return idDepartamento;
+	}
+
+	public void setIdDepartamento(Long idDepartamento) {
+		this.idDepartamento = idDepartamento;
+	}
+
+	public String getNombreDepartamento() {
+		return nombreDepartamento;
+	}
+
+	public void setNombreDepartamento(String nombreDepartamento) {
+		this.nombreDepartamento = nombreDepartamento;
+	}
+	
+	
 	
 }

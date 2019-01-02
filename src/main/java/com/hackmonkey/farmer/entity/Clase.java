@@ -25,4 +25,27 @@ public class Clase extends BaseEntity implements Serializable{
 	
 	private String nombreClase;
 
+	public Clase() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdClase() {
+		return idClase;
+	}
+
+	public void setIdClase(Long idClase) {
+		this.idClase = idClase;
+	}
+
+	public String getNombreClase() {
+		return nombreClase;
+	}
+
+	public void setNombreClase(String nombreClase) {
+		this.nombreClase = nombreClase;
+	}
+	
+	
+	
 }

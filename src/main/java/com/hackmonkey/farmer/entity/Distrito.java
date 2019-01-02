@@ -24,5 +24,28 @@ public class Distrito extends BaseEntity implements Serializable{
 	private Long idDistrito;
 	
 	private String nombreDistrito;
+
+	public Distrito() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdDistrito() {
+		return idDistrito;
+	}
+
+	public void setIdDistrito(Long idDistrito) {
+		this.idDistrito = idDistrito;
+	}
+
+	public String getNombreDistrito() {
+		return nombreDistrito;
+	}
+
+	public void setNombreDistrito(String nombreDistrito) {
+		this.nombreDistrito = nombreDistrito;
+	}
+	
+	
 	
 }

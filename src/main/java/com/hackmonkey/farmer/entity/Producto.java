@@ -24,5 +24,28 @@ public class Producto extends BaseEntity implements Serializable{
 	private Long idProducto;
 	
 	private String nombreProducto;
+
+	public Producto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdProducto() {
+		return idProducto;
+	}
+
+	public void setIdProducto(Long idProducto) {
+		this.idProducto = idProducto;
+	}
+
+	public String getNombreProducto() {
+		return nombreProducto;
+	}
+
+	public void setNombreProducto(String nombreProducto) {
+		this.nombreProducto = nombreProducto;
+	}
+	
+	
 	
 }

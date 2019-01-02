@@ -24,5 +24,29 @@ public class Provincia extends BaseEntity implements Serializable{
 	private Long idProvincia;
 	
 	private String nombreProvincia;
+
+	public Provincia() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdProvincia() {
+		return idProvincia;
+	}
+
+	public void setIdProvincia(Long idProvincia) {
+		this.idProvincia = idProvincia;
+	}
+
+	public String getNombreProvincia() {
+		return nombreProvincia;
+	}
+
+	public void setNombreProvincia(String nombreProvincia) {
+		this.nombreProvincia = nombreProvincia;
+	}
+	
+	
+	
 	
 }

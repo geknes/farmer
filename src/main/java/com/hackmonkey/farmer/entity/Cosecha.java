@@ -24,6 +24,31 @@ public class Cosecha extends BaseEntity implements Serializable{
 	private Long idCosecha;
 	
 	private String descripcion;
+
+	public Cosecha() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdCosecha() {
+		return idCosecha;
+	}
+
+	public void setIdCosecha(Long idCosecha) {
+		this.idCosecha = idCosecha;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 	
 	
 	
