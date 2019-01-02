@@ -24,5 +24,28 @@ public class Subclase extends BaseEntity implements Serializable{
 	private Long idSubclase;
 	
 	private String nombreSubclase;
+
+	public Subclase() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Long getIdSubclase() {
+		return idSubclase;
+	}
+
+	public void setIdSubclase(Long idSubclase) {
+		this.idSubclase = idSubclase;
+	}
+
+	public String getNombreSubclase() {
+		return nombreSubclase;
+	}
+
+	public void setNombreSubclase(String nombreSubclase) {
+		this.nombreSubclase = nombreSubclase;
+	}
+	
+	
 	
 }
