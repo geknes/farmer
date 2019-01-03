@@ -19,8 +19,16 @@
         <div class="card-header"><h4 class="text-center">Distrito</h4></div>
         <div class="card-body">
           <div class="form-group">
-            <label for="idProvincia">Region</label>
-            <select class="form-control" name="" id="idProvincia">
+            <label for="">Ubigeo</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter ubigeo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="idDepartamento">Departamento</label>
+            <select class="form-control" name="" id="idDepartamento">
               <option value="">--Selecione--</option>
               <option value="">Lima</option>
               <option value="">Ica</option>
@@ -47,14 +55,15 @@
           <input
             class="btn btn-block btn-primary"
             type="button"
-            value="submit"
+            value="Agregar"
           />
-          <div class="form-group my-3">
+          <div class="form-group my-3 table-responsive">
             <table class="table text-center table-bordered">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">Id</th>
-                  <th scope="col">Region</th>
+                  <th scope="col">Ubigeo</th>
+                  <th scope="col">Departamento</th>
                   <th scope="col">Provincia</th>
                   <th scope="col">Distrito</th>
                   <th scope="col">Accion</th>
@@ -63,41 +72,32 @@
               <tbody>
                 <tr>
                   <th ecope="row">01</th>
+                  <td>020212</td>
                   <td>Lima</td>
                   <td>Huaral</td>
                   <td>Chancay</td>
                   <td>
-                    <input
-                      class="btn btn-success"
-                      type="button"
-                      value="Edit"
-                    />
+                    <input class="btn btn-success" type="button" value="Editar" />
                   </td>
                 </tr>
                 <tr>
                   <th ecope="row">02</th>
+                  <td>040410</td>
                   <td>Ica</td>
                   <td>Pisco</td>
                   <td>Pisco</td>
                   <td>
-                    <input
-                      class="btn btn-success"
-                      type="button"
-                      value="Edit"
-                    />
+                    <input class="btn btn-success" type="button" value="Editar" />
                   </td>
                 </tr>
                 <tr>
                   <th ecope="row">03</th>
+                  <td>010405</td>
                   <td>Lima</td>
                   <td>Huaral</td>
                   <td>Huaral</td>
                   <td>
-                    <input
-                      class="btn btn-success"
-                      type="button"
-                      value="Edit"
-                    />
+                    <input class="btn btn-success" type="button" value="Editar" />
                   </td>
                 </tr>
               </tbody>
