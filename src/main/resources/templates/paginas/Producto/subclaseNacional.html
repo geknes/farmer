@@ -13,35 +13,44 @@
     />
   </head>
   <body>
-    <div class="container my-4">
-      <h2 class="text-center">Tabla Distrito</h2>
+    <div class="container my-5">
+      <h2 class="text-center">Table Subclase Nacional Producto</h2>
       <div class="card">
-        <div class="card-header"><h4 class="text-center">Distrito</h4></div>
+        <div class="card-header">Subclase Nacional</div>
         <div class="card-body">
           <div class="form-group">
-            <label for="idProvincia">Region</label>
-            <select class="form-control" name="" id="idProvincia">
+            <label for="idRegion">Grupo</label>
+            <select class="form-control" name="" id="">
               <option value="">--Selecione--</option>
-              <option value="">Lima</option>
-              <option value="">Ica</option>
-              <option value="">Arequipa</option>
+              <option value="">Tuberculos</option>
+              <option value="">Cereales</option>
+              <option value="">Hortalizas</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="idProvincia">Provincia</label>
-            <select class="form-control" name="" id="idProvincia">
+            <label for="idRegion">Clase</label>
+            <select class="form-control" name="" id="">
               <option value="">--Selecione--</option>
-              <option value="">Huaral</option>
-              <option value="">Barranca</option>
-              <option value="">Cañete</option>
+              <option value="">Tuberculos</option>
+              <option value="">Cereales</option>
+              <option value="">Hortalizas</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="">Distrito</label>
+            <label for="idRegion">Subclase</label>
+            <select class="form-control" name="" id="">
+              <option value="">--Selecione--</option>
+              <option value="">Papa</option>
+              <option value="">Esparrago</option>
+              <option value="">Trigo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Subclase Nacional</label>
             <input
               class="form-control"
               type="text"
-              placeholder="Enter distrito"
+              placeholder="Enter subclase nacional"
             />
           </div>
           <input
@@ -54,49 +63,41 @@
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">Id</th>
-                  <th scope="col">Region</th>
-                  <th scope="col">Provincia</th>
-                  <th scope="col">Distrito</th>
+                  <th scope="col">Grupo</th>
+                  <th scope="col">Clase</th>
+                  <th scope="col">Subclase</th>
+                  <th scope="col">Subclase Nacional</th>
                   <th scope="col">Accion</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th ecope="row">01</th>
-                  <td>Lima</td>
-                  <td>Huaral</td>
-                  <td>Chancay</td>
+                  <td>Cereales</td>
+                  <td>Trigo</td>
+                  <td>Trigo</td>
+                  <td>Trigo</td>
                   <td>
+                    <input class="btn btn-success" type="button" value="Edit" />
                     <input
-                      class="btn btn-success"
+                      class="btn btn-danger"
                       type="button"
-                      value="Edit"
+                      value="Eliminar"
                     />
                   </td>
                 </tr>
                 <tr>
                   <th ecope="row">02</th>
-                  <td>Ica</td>
-                  <td>Pisco</td>
-                  <td>Pisco</td>
+                  <td>Hortalizas</td>
+                  <td>Esparrago</td>
+                  <td>Esparrago</td>
+                  <td>Esparrago</td>
                   <td>
+                    <input class="btn btn-success" type="button" value="Edit" />
                     <input
-                      class="btn btn-success"
+                      class="btn btn-danger"
                       type="button"
-                      value="Edit"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <th ecope="row">03</th>
-                  <td>Lima</td>
-                  <td>Huaral</td>
-                  <td>Huaral</td>
-                  <td>
-                    <input
-                      class="btn btn-success"
-                      type="button"
-                      value="Edit"
+                      value="Eliminar"
                     />
                   </td>
                 </tr>
