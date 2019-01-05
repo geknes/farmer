@@ -11,7 +11,6 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body>
     <div class="container my-4">
@@ -20,21 +19,29 @@
         <div class="card-header"><h4 class="text-center">Distrito</h4></div>
         <div class="card-body">
           <div class="form-group">
-            <label for="idRegion">Region</label>
-            <select class="form-control" name="" id="">
+            <label for="">Ubigeo</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter ubigeo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="idDepartamento">Departamento</label>
+            <select class="form-control" name="" id="idDepartamento">
               <option value="">--Selecione--</option>
-              <option value="">Amazonas</option>
               <option value="">Lima</option>
               <option value="">Ica</option>
+              <option value="">Arequipa</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="provincia">Provincia</label>
-            <select class="form-control" name="" id="provincia">
+            <label for="idProvincia">Provincia</label>
+            <select class="form-control" name="" id="idProvincia">
               <option value="">--Selecione--</option>
               <option value="">Huaral</option>
               <option value="">Barranca</option>
-              <option value="">Huaura</option>
+              <option value="">Cañete</option>
             </select>
           </div>
           <div class="form-group">
@@ -48,65 +55,54 @@
           <input
             class="btn btn-block btn-primary"
             type="button"
-            value="submit"
+            value="Agregar"
           />
-        </div>
-        <div class="form-group mx-5">
-          <table class="table text-center table-bordered">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Region</th>
-                <th scope="col">Provincia</th>
-                <th scope="col">Distrito</th>
-                <th scope="col">Accion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th ecope="row">01</th>
-                <td>Lima</td>
-                <td>Huaral</td>
-                <td>Chancay</td>
-                <td>
-                  <input class="btn btn-success" type="button" value="Edit" />
-                  <input
-                    class="btn btn-danger"
-                    type="button"
-                    value="Eliminar"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th ecope="row">02</th>
-                <td>Lima</td>
-                <td>Huaral</td>
-                <td>Aucallama</td>
-                <td>
-                  <input class="btn btn-success" type="button" value="Edit" />
-                  <input
-                    class="btn btn-danger"
-                    type="button"
-                    value="Eliminar"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <th ecope="row">03</th>
-                <td>Ancash</td>
-                <td>Chasquitambo</td>
-                <td>Chasquitambo</td>
-                <td>
-                  <input class="btn btn-success" type="button" value="Edit" />
-                  <input
-                    class="btn btn-danger"
-                    type="button"
-                    value="Eliminar"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="form-group my-3 table-responsive">
+            <table class="table text-center table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Ubigeo</th>
+                  <th scope="col">Departamento</th>
+                  <th scope="col">Provincia</th>
+                  <th scope="col">Distrito</th>
+                  <th scope="col">Accion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th ecope="row">01</th>
+                  <td>020212</td>
+                  <td>Lima</td>
+                  <td>Huaral</td>
+                  <td>Chancay</td>
+                  <td>
+                    <input class="btn btn-success" type="button" value="Editar" />
+                  </td>
+                </tr>
+                <tr>
+                  <th ecope="row">02</th>
+                  <td>040410</td>
+                  <td>Ica</td>
+                  <td>Pisco</td>
+                  <td>Pisco</td>
+                  <td>
+                    <input class="btn btn-success" type="button" value="Editar" />
+                  </td>
+                </tr>
+                <tr>
+                  <th ecope="row">03</th>
+                  <td>010405</td>
+                  <td>Lima</td>
+                  <td>Huaral</td>
+                  <td>Huaral</td>
+                  <td>
+                    <input class="btn btn-success" type="button" value="Editar" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
