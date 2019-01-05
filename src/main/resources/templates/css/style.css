@@ -1,0 +1,149 @@
+.none {
+  display: none;
+}
+.menu-contenido {
+  height: 50px;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.show-menu {
+  height: 30px;
+  width: 30px;
+  border: 2px rgb(24, 106, 59, 1) solid;
+  color: rgb(24, 106, 59, 1);
+  cursor: pointer;
+}
+.img-perfil {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  border: rgb(169, 228, 225) solid 3px;
+}
+.img-per {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  border-radius: 50%;
+  border: rgb(169, 228, 225) solid 1px;
+}
+.perfil {
+  color: white;
+}
+.users-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.users-tipe {
+  font-weight: 100;
+  font-size: 1rem;
+}
+/* Menu */
+.menu-master > ul > li {
+  height: 40px;
+}
+.menu-master > ul > li:hover {
+  background-color: rgb(24, 106, 59, 1);
+}
+.submenu-producto > ul > li {
+  height: 40px;
+}
+.submenu-producto > ul > li > a {
+  width: 100%;
+  height: 100%;
+}
+.submenu-producto > ul > li > a > div {
+  height: 100%;
+}
+.submenu-producto > ul > li:hover {
+  background-color: rgb(24, 106, 59, 1);
+}
+.submenu-ubigeo > ul > li {
+  height: 40px;
+}
+.submenu-ubigeo > ul > li > a {
+  width: 100%;
+  height: 100%;
+}
+.submenu-ubigeo > ul > li > a > div {
+  height: 100%;
+}
+.submenu-ubigeo > ul > li:hover {
+  background-color: rgb(24, 106, 59, 1);
+}
+.menu-master > ul > li > a {
+  width: 100%;
+  height: 100%;
+}
+.menu-master > ul > li > a > div {
+  height: 100%;
+}
+.icon-menu {
+  width: 30px;
+  height: 100%;
+}
+/* Colores */
+.greenclear-0 {
+  background-color: rgb(234, 250, 241, 1);
+}
+.greenclear-1 {
+  background-color: rgb(213, 245, 227, 1);
+}
+.greenclear-2 {
+  background-color: rgb(171, 235, 198, 1);
+}
+.greenclear-3 {
+  background-color: rgb(130, 224, 170, 1);
+}
+.greenclear-4 {
+  background-color: rgb(88, 214, 141, 1);
+}
+.greenclear-5 {
+  background-color: rgb(46, 204, 113, 1);
+}
+.greenclear-6 {
+  background-color: rgb(40, 180, 99, 1);
+}
+.greenclear-7 {
+  background-color: rgb(35, 155, 86, 1);
+}
+.greenclear-8 {
+  background-color: rgb(29, 131, 72, 1);
+}
+.greenclear-9 {
+  background-color: rgb(24, 106, 59, 1);
+}
+
+.greendark-0 {
+  background-color: rgb(233, 247, 239, 1);
+}
+.greendark-1 {
+  background-color: rgb(212, 239, 223, 1);
+}
+.greendark-2 {
+  background-color: rgb(169, 223, 191, 1);
+}
+.greendark-3 {
+  background-color: rgb(125, 206, 160, 1);
+}
+.greendark-4 {
+  background-color: rgb(82, 190, 128, 1);
+}
+.greendark-5 {
+  background-color: rgb(39, 174, 96, 1);
+}
+.greendark-6 {
+  background-color: rgb(34, 153, 84, 1);
+}
+.greendark-7 {
+  background-color: rgb(30, 132, 73, 1);
+}
+.greendark-8 {
+  background-color: rgb(25, 111, 61, 1);
+}
+.greendark-9 {
+  background-color: rgb(20, 90, 50, 1);
+}

@@ -20,6 +20,13 @@
   <body>
     <div class="container">
       <h1 class="text-center">Tabla Agricultor</h1>
+      <div class="d-flex justify-content-around">
+        <button class="btn btn-primary">Insertar Usuario</button>
+        <button class="btn btn-primary">Lista Agricultor</button>
+        <button class="btn btn-primary">Lista Empresa</button>
+      </div>
+
+
       <div class="card">
         <div class="card-header "><h4 class="text-center">Agricultor</h4></div>
         <div class="card-body">
@@ -61,6 +68,35 @@
                   />
                 </div>
               </div>
+              <div class="form-group">
+                  <label for="">Selecione</label>
+                  <div class="row align-items-center">
+                    <div class="col-auto">
+                      <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input
+                            type="radio"
+                            class="form-check-input"
+                            name="optradio"
+                            id="mfour"
+                          />Varon
+                        </label>
+                      </div>
+                      <div class="form-check-inline">
+                        <label class="form-check-label">
+                          <input
+                            type="radio"
+                            class="form-check-input"
+                            name="optradio"
+                            id="mthree"
+                          />Mujer
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               <div class="form-group">
                 <label for="">Nombre</label>
                 <input
@@ -188,6 +224,53 @@
           </form>
         </div>
       </div>
+
+      <div class="form-group my-3 table-responsive">
+          <table class="table text-center table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Direccion</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th ecope="row">01</th>
+                <td>Jaramillo Perez, Sabino</td>
+                <td></td>
+                <td>Huaral</td>
+                <td>Chancay</td>
+                <td>
+                  <input class="btn btn-success" type="button" value="Editar" />
+                </td>
+              </tr>
+              <tr>
+                <th ecope="row">02</th>
+                <td>040410</td>
+                <td>Ica</td>
+                <td>Pisco</td>
+                <td>Pisco</td>
+                <td>
+                  <input class="btn btn-success" type="button" value="Editar" />
+                </td>
+              </tr>
+              <tr>
+                <th ecope="row">03</th>
+                <td>010405</td>
+                <td>Lima</td>
+                <td>Huaral</td>
+                <td>Huaral</td>
+                <td>
+                  <input class="btn btn-success" type="button" value="Editar" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <div></div>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
