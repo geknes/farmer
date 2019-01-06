@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    >
+  </head>
+  <body>
+    <div class="container my-4">
+      <h2 class="text-center">Tabla Departamento</h2>
+      <div class="card">
+        <div class="card-header"><h4 class="text-center">Departamento</h4></div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="">Ubigeo</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter Ubigeo"
+            />
+          </div>
+          <div class="form-group">
+            <label for="">Departamento</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter departamento"
+            />
+          </div>
+          <input
+            class="btn btn-block btn-primary"
+            type="button"
+            value="Agregar"
+          />
+          <div class="my-3 table-responsive-sm">
+            <table class="table text-center table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Ubigeo</th>
+                  <th scope="col">Departamento</th>
+                  <th scope="col">Accion</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr data-th-each="departamento : ${lstDepartamentos}">
+                  <td th:text="${departamento.idDepartamento}"></td>
+                  <td>02</td>
+                  <td th:text="${departamento.nombreDepartamento}"></td>
+                  <td>
+                    <input
+                      class="btn btn-success"
+                      type="button"
+                      value="Editar"
+                    />
+                  </td>
+                <!--</tr>
+                <tr>
+                  <th ecope="row">11</th>
+                  <td>02</td>
+                  <td>Lima</td>
+                  <td>
+                    <input
+                      class="btn btn-success"
+                      type="button"
+                      value="Editar"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <th ecope="row">12</th>
+                  <td>06</td>
+                  <td>Ica</td>
+                  <td>
+                    <input
+                      class="btn btn-success"
+                      type="button"
+                      value="Editar"
+                    />
+                  </td>
+                </tr>-->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
