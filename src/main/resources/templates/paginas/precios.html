@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
+    />
+    <script
+      src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js"
+      type="text/javascript"
+    ></script>
+    <link
+      href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css"
+      rel="stylesheet"
+      type="text/css"
     />
     <link
       rel="stylesheet"
@@ -28,141 +37,317 @@
         <div class="card-body">
           <div class="form-group">
             <label for="hectaria">Fecha</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter fecha"
-              id="hectaria"
-            />
+            <input placeholder="Enter fecha" id="datepicker" width="276" />
           </div>
           <div class="form-group">
             <label for="">Variables a mostrar</label>
-            <div class="row align-items-center">
-              <div class="col-auto">
-                <div class="form-check-inline">
-                  <label class="form-check-label">
+            <div class="">
+              <div class="row pl-3">
+                <div class="custom-control custom-radio custom-control-inline">
                     <input
                       type="radio"
-                      class="form-check-input"
-                      name="optradio"
-                      id="mfour"
-                    />Precio
-                  </label>
+                      class="custom-control-input"
+                      name="precio-volumen"
+                      id="precio"
+                      checked
+                    />
+                  <label class="custom-control-label" for="precio">Precio</label>
                 </div>
-                <div class="form-check-inline">
-                  <label class="form-check-label">
+                <div class="custom-control custom-radio custom-control-inline">
                     <input
                       type="radio"
-                      class="form-check-input"
-                      name="optradio"
-                      id="mthree"
-                    />Volumen
-                  </label>
+                      class="custom-control-input"
+                      name="precio-volumen"
+                      id="volumen"
+                    />
+                  <label class="custom-control-label" for="volumen">Volumen</label>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Seleccionar el precio a mostrar -->
           <div class="form-group">
-            <div class="item d-flex justify-content-between px-2">
-              <div
-                class="item custom-control custom-checkbox custom-control-inline"
-                id="all-acelga"
-              >
-                <input
-                  type="checkbox"
-                  class="custom-control-input"
-                  id="acelga0"
-                  name="acelga"
-                />
-                <label class="custom-control-label" for="acelga0">Acelga</label>
-              </div>
-              <div class="" id="caret-right">
-                <span class="caret-right"
-                  ><i class="fas fa-caret-right fa-lg"></i
-                ></span>
+              <label for="">Producto/Variedad</label>
+              <div class="">
+                <div class="row pl-3">
+                  <div class="custom-control custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        name="todos"
+                        id="todo"
+                      />
+                    <label class="custom-control-label" for="todo">Todos</label>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="item pl-5 acelga none">
-              <div class="">
+          <!-- Seleccionar el precio a mostrar -->
+          <div class="form-group list-producto">
+            <div class="list-producto-precio">
+              <div class="item d-flex justify-content-between px-2">
                 <div
                   class="item custom-control custom-checkbox custom-control-inline"
                 >
                   <input
                     type="checkbox"
                     class="custom-control-input"
-                    id="acelga1"
+                    id="acelga0"
                     name="acelga"
-                    value="off"
                   />
-                  <label class="custom-control-label" for="acelga1"
+                  <label class="custom-control-label" for="acelga0"
                     >Acelga</label
                   >
                 </div>
+                <div class="" id="caret-right">
+                  <span class="caret-right"
+                    ><i class="fas fa-caret-right fa-lg"></i
+                  ></span>
+                </div>
               </div>
-              <div class="">
-                <div
-                  class="item custom-control custom-checkbox custom-control-inline"
-                >
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="acelgaprueba"
-                    name="acelga"
-                  />
-                  <label class="custom-control-label" for="acelgaprueba"
-                    >Acelga prueba</label
+              <div class="item pl-5 acelga none">
+                <div class="">
+                  <div
+                    class="item custom-control custom-checkbox custom-control-inline"
                   >
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="acelga1"
+                      name="acelga"
+                      value="off"
+                    />
+                    <label class="custom-control-label" for="acelga1"
+                      >Acelga</label
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div
+                    class="item custom-control custom-checkbox custom-control-inline"
+                  >
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="acelgaprueba"
+                      name="acelga"
+                    />
+                    <label class="custom-control-label" for="acelgaprueba"
+                      >Acelga prueba</label
+                    >
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="item">
-              <div
-                class="item custom-control custom-checkbox custom-control-inline"
-              >
-                <input type="checkbox" class="custom-control-input" id="aji" />
-                <label class="custom-control-label" for="aji">Aji</label>
+            <div class="list-producto-precio">
+              <div class="item d-flex justify-content-between px-2">
+                <div
+                  class="item custom-control custom-checkbox custom-control-inline"
+                  id=""
+                >
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="aji0"
+                    name="aji"
+                  />
+                  <label class="custom-control-label" for="aji0">Aji</label>
+                </div>
+                <div class="" id="caret">
+                  <span class="caret-right"
+                    ><i class="fas fa-caret-right fa-lg"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="item pl-5 aji none">
+                <div class="">
+                  <div
+                    class="item custom-control custom-checkbox custom-control-inline"
+                  >
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="aji1"
+                      name="aji"
+                      value="off"
+                    />
+                    <label class="custom-control-label" for="acelga1"
+                      >Aji Amarillo Seco</label
+                    >
+                  </div>
+                </div>
+                <div class="">
+                  <div
+                    class="item custom-control custom-checkbox custom-control-inline"
+                  >
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="aji2"
+                      name="aji"
+                    />
+                    <label class="custom-control-label" for="acelgaprueba"
+                      >Aji Mirasol Seco</label
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="item">
-              <div
-                class="item custom-control custom-checkbox custom-control-inline"
-              >
-                <input type="checkbox" class="custom-control-input" id="ajo" />
-                <label class="custom-control-label" for="ajo">Ajo</label>
-              </div>
+
+            <div class="list-producto-precio">
+                <div class="item d-flex justify-content-between px-2">
+                    <div
+                      class="item custom-control custom-checkbox custom-control-inline"
+                      id=""
+                    >
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="ajo0"
+                        name="ajo"
+                      />
+                      <label class="custom-control-label" for="ajo0">Ajo</label>
+                    </div>
+                    <div class="" id="">
+                      <span class="caret-right"
+                        ><i class="fas fa-caret-right fa-lg"></i
+                      ></span>
+                    </div>
+                  </div>
+            </div>
+            <div class="list-producto-precio">
+                <div class="item d-flex justify-content-between px-2">
+                    <div
+                      class="item custom-control custom-checkbox custom-control-inline"
+                      id=""
+                    >
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="albaca0"
+                        name="albaca"
+                      />
+                      <label class="custom-control-label" for="albaca0">Albaca</label>
+                    </div>
+                    <div class="" id="">
+                      <span class="caret-right"
+                        ><i class="fas fa-caret-right fa-lg"></i
+                      ></span>
+                    </div>
+                  </div>
+            </div>
+            <div class="list-producto-precio">
+                <div class="item d-flex justify-content-between px-2">
+                    <div
+                      class="item custom-control custom-checkbox custom-control-inline"
+                      id=""
+                    >
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="alcachofa0"
+                        name="alcachofa"
+                      />
+                      <label class="custom-control-label" for="alcachofa0">Alvachofa</label>
+                    </div>
+                    <div class="" id="">
+                      <span class="caret-right"
+                        ><i class="fas fa-caret-right fa-lg"></i
+                      ></span>
+                    </div>
+                  </div>
+            </div>
+            <div class="list-producto-precio">
+                <div class="item d-flex justify-content-between px-2">
+                    <div
+                      class="item custom-control custom-checkbox custom-control-inline"
+                      id=""
+                    >
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="apio0"
+                        name="apio"
+                      />
+                      <label class="custom-control-label" for="apio0">Apio</label>
+                    </div>
+                    <div class="" id="">
+                      <span class="caret-right"
+                        ><i class="fas fa-caret-right fa-lg"></i
+                      ></span>
+                    </div>
+                  </div>
             </div>
           </div>
 
           <input
             class="btn btn-block btn-primary"
             type="button"
-            value="Agregar"
+            value="Consultar Precio"
           />
-          <div class="my-3 table-responsive-sm">
-            <table class="table text-center table-bordered">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Id</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th ecope="row">11</th>
-                </tr>
-                <tr>
-                  <th ecope="row">12</th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        </div>
+
+        <!-- Tabla de los precios -->
+        <div class="my-3 table-responsive-sm">
+          <table class="table text-center table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Variedad</th>
+                <th scope="col">Precio Min.</th>
+                <th scope="col">Precio Max.</th>
+                <th scope="col">Precio Prom.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Zapallo</td>
+                <td>Zapallo Loche</td>
+                <td>1.50</td>
+                <td>1.80</td>
+                <td>1.65</td>
+              </tr>
+              <tr>
+                <td>Uva</td>
+                <td>Uva Italiana</td>
+                <td>2.80</td>
+                <td>6.00</td>
+                <td>4.20</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
     <script>
+      $("#datepicker").datepicker({ uiLibrary: "bootstrap4" });
+
       document.addEventListener("DOMContentLoaded", function() {
+        // Insertar fecha por defecto
+        var date = function() {
+          var fecha = document.getElementById("datepicker");
+          var date = new Date();
+          var day = date.getDate(); //Dia
+          var month = date.getMonth(); // Mes
+          var year = date.getFullYear(); // Año
+          var a = month + 1;
+          if (a <= 9) {
+            if (day <= 9) {
+              fecha.value = "0" + a + "/" + "0" + day + "/" + year;
+            } else {
+              fecha.value = "0" + a + "/" + day + "/" + year;
+            }
+          } else {
+            if (day <= 9) {
+              fecha.value = a + "/" + "0" + day + "/" + year;
+            } else {
+              fecha.value = a + "/" + "0" + day + "/" + year;
+            }
+          }
+        };
+        date();
+        // End of a Fecha
+
         var right = document.getElementById("caret-right");
         right.addEventListener("click", function() {
           var EventAcelga = document.querySelector(".acelga");
@@ -172,25 +357,45 @@
             EventAcelga.classList.remove("none");
           }
         });
+        var caret = document.getElementById("caret");
+        caret.addEventListener("click", function() {
+          var EventAji = document.querySelector(".aji");
+          if (EventAji.classList.toggle("none")) {
+            EventAji.classList.add("none");
+          } else {
+            EventAji.classList.remove("none");
+          }
+        });
 
-
-        var all = document.getElementById("acelga0");
-        all.addEventListener("click", function(){
-        //   evt.preventDefault();
-        //   var check = document.querySelectorAll("[name=acelga");
-          var checkbox = document.getElementById("acelga0").checked;
-          var ace = document.getElementById("acelga1");
-          var acee = document.getElementById("acelgaprueba");
-            // console.log(checkbox);
-            if(checkbox != true){
-                ace.checked = false;
-                acee.checked = false;
-            }else{
-                ace.checked = true;
-                acee.checked = true;
-            }
-          })
-         
+        var checkbox = document.getElementById("acelga0");
+        var ace = document.getElementById("acelga1");
+        var acee = document.getElementById("acelgaprueba");
+        checkbox.addEventListener("click", function() {
+          //   evt.preventDefault();
+          //   var check = document.querySelectorAll("[name=acelga");
+          //   var checkbox = document.getElementById("acelga0");
+          if (checkbox.checked != true) {
+            ace.checked = false;
+            acee.checked = false;
+          } else {
+            ace.checked = true;
+            acee.checked = true;
+          }
+        });
+        ace.addEventListener("click", function() {
+          if (ace.checked != true && acee.checked != true) {
+            checkbox.checked = false;
+          } else {
+            checkbox.checked = true;
+          }
+        });
+        acee.addEventListener("click", function() {
+          if (acee.checked != true && ace.checked != true) {
+            checkbox.checked = false;
+          } else {
+            checkbox.checked = true;
+          }
+        });
       });
     </script>
   </body>
