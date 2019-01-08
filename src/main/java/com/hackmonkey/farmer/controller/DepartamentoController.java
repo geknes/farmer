@@ -12,14 +12,14 @@ import com.hackmonkey.farmer.entity.Departamento;
 import com.hackmonkey.farmer.service.interfaces.DepartamentoService;
 
 @Controller
-@RequestMapping("/departamento")
+//@RequestMapping("/")
 public class DepartamentoController {
 
 	
 	@Autowired
 	private DepartamentoService departamentoService;
 	
-	@GetMapping("/listado")
+	@GetMapping("/departamentos")
 	public String listar(Model model)
 	{
 		List<Departamento> lstDepartamentos = departamentoService.listar(); 
@@ -27,5 +27,14 @@ public class DepartamentoController {
 		return "departamento";
 		
 	}
+	
+	@GetMapping("/agregar-departamento")
+	public String agregar()
+	{
+	
+		return "departamento-agregar";
+		
+	}
+	
 	
 }

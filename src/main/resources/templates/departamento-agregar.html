@@ -35,32 +35,9 @@
 		            />
 		          </div>
 		          <button type="button" class="btn btn-block btn-primary"><a th:href="@{/agregar-departamento}" class="text-white h5">AGREGAR</a></button>
-		          <input class="btn btn-block btn-primary" type="button" value="Agregar"/>
+		          
 		          <div class="my-3 table-responsive-sm">
-		            <table class="table text-center table-bordered">
-		              <thead class="thead-dark">
-		                <tr>
-		                  <th scope="col">Id</th>
-		                  <th scope="col">Ubigeo</th>
-		                  <th scope="col">Departamento</th>
-		                  <th scope="col">Accion</th>
-		                </tr>
-		              </thead>
-		              <tbody>
-		              	<tr data-th-each="departamento : ${lstDepartamentos}">
-		                  <td th:text="${departamento.idDepartamento}"></td>
-		                  <td>02</td>
-		                  <td th:text="${departamento.nombreDepartamento}"></td>
-		                  <td>
-		                    <input
-		                      class="btn btn-success"
-		                      type="button"
-		                      value="Editar"
-		                    />
-		                  </td>
-		               
-		              </tbody>
-		            </table>
+		            
 		          </div>
 		        </div>
 		      </div>
